@@ -4,7 +4,7 @@
 IPA_URL=`curl https://expo.io/--/api/v2/versions |  python -c 'import sys, json; print json.load(sys.stdin)["iosUrl"]'`
 
 # download tar.gz
-TMP_PATH=/tmp/exponent.tar.gz
+TMP_PATH=$TMPDIR/exponent.tar.gz
 wget -O $TMP_PATH $IPA_URL
 
 # recursively make app dir
